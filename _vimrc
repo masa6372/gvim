@@ -4,14 +4,14 @@
 let g:plug_timeout = 300
 
 call plug#begin('~/.config/nvim/plugged')
-	Plug 'preservim/nerdtree'                               "ƒvƒ‰ƒOƒCƒ“ŠÇ——p
-	Plug 'ycm-core/YouCompleteMe', {'do': './install.py'}   "©“®•âŠÔ
+	Plug 'preservim/nerdtree'                               "ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ç®¡ç†ç”¨
+	Plug 'ycm-core/YouCompleteMe', {'do': './install.py'}   "è‡ªå‹•è£œé–“
 	Plug 'itchyny/calendar.vim'
-	"ƒJƒŒƒ“ƒ_[ 
+	"ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼ 
 	Plug 'vim-syntastic/syntastic'
-	"•¶–@ƒ~ƒX‚ÌƒnƒCƒ‰ƒCƒg
+	"æ–‡æ³•ãƒŸã‚¹ã®ãƒã‚¤ãƒ©ã‚¤ãƒˆ
 	Plug 'godlygeek/tabular'
-	"ˆÈ‰ºMarkDown‚Ì‚½‚ß
+	"ä»¥ä¸‹MarkDownã®ãŸã‚
 	Plug 'plasticboy/vim-markdown'
 	Plug 'previm/previm'
     Plug 'daeyun/vim-matlab'
@@ -29,46 +29,44 @@ let g:coc_global_extensions = [
 "-------------------------------------------------------------------------
 "                           markdown settings
 "-------------------------------------------------------------------------
-let g:previm_open_cmd = '/mnt/c/Program\ Files/Google/Chrome/Application/chrome.exe'
-"MarkDown‚Åƒuƒ‰ƒEƒU•\¦‚³‚¹‚é‚½‚ß‚ÌƒpƒX
-let g:previm_wsl_mode = 1
-"WSL‚Åprevim‚ğ—p‚¢‚Äƒuƒ‰ƒEƒU•\¦‚³‚¹‚é‚½‚ß‚Ìİ’è
+let g:previm_open_cmd = 'C:/Program\ Files//Google/Chrome/Application/chrome.exe'
+"MarkDownã§ãƒ–ãƒ©ã‚¦ã‚¶è¡¨ç¤ºã•ã›ã‚‹ãŸã‚ã®ãƒ‘ã‚¹
 "--------------------------------------------------------------------------
 "                            general settings
 "--------------------------------------------------------------------------
 silent! helptags ALL
 syntax on
-"ƒVƒ“ƒ^ƒbƒNƒXƒnƒCƒ‰ƒCƒg‚ğ—LŒø‰»
+"ã‚·ãƒ³ã‚¿ãƒƒã‚¯ã‚¹ãƒã‚¤ãƒ©ã‚¤ãƒˆã‚’æœ‰åŠ¹åŒ–
 filetype plugin indent on
-"ƒtƒ@ƒCƒ‹ƒ^ƒCƒv‚ÉŠî‚Ã‚¢‚½ƒCƒ“ƒfƒ“ƒg‚ğ—LŒø‰»
-set foldmethod=indent       "ƒCƒ“ƒfƒ“ƒg‚Å‚½‚½‚Ş
+"ãƒ•ã‚¡ã‚¤ãƒ«ã‚¿ã‚¤ãƒ—ã«åŸºã¥ã„ãŸã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆã‚’æœ‰åŠ¹åŒ–
+set foldmethod=indent       "ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆã§ãŸãŸã‚€
 set autoindent
-"V‚µ‚¢s‚ğn‚ß‚é‚Æ‚«‚É©“®‚ÅƒCƒ“ƒfƒ“ƒg 
-set expandtab               "ƒ^ƒu‚ğƒXƒy[ƒX‚É•ÏŠ·
+"æ–°ã—ã„è¡Œã‚’å§‹ã‚ã‚‹ã¨ãã«è‡ªå‹•ã§ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆ 
+set expandtab               "ã‚¿ãƒ–ã‚’ã‚¹ãƒšãƒ¼ã‚¹ã«å¤‰æ›
 set tabstop=4
-"ƒ^ƒu‚ğƒXƒy[ƒXl•¶š‚ÆƒJƒEƒ“ƒg
+"ã‚¿ãƒ–ã‚’ã‚¹ãƒšãƒ¼ã‚¹å››æ–‡å­—ã¨ã‚«ã‚¦ãƒ³ãƒˆ
 set shiftwidth=4
-"©“®ƒCƒ“ƒfƒ“ƒg‚Ég‚í‚ê‚éƒXƒy[ƒX‚Ì”‚ğl‚Éİ’è
+"è‡ªå‹•ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆã«ä½¿ã‚ã‚Œã‚‹ã‚¹ãƒšãƒ¼ã‚¹ã®æ•°ã‚’å››ã«è¨­å®š
 set backspace=2
-"ƒoƒbƒNƒXƒy[ƒX‚Ì‹““®‚ğC³
+"ãƒãƒƒã‚¯ã‚¹ãƒšãƒ¼ã‚¹ã®æŒ™å‹•ã‚’ä¿®æ­£
 set termguicolors
-"tmux‚È‚Ç‚ÌƒJƒ‰[ƒXƒL[ƒ€‚ğC³
-colorscheme torte           "ƒJƒ‰[ƒXƒL[ƒ€‚ğİ’è
-set number                  "s”‚ğ’Ç‰Á
+"tmuxãªã©ã®ã‚«ãƒ©ãƒ¼ã‚¹ã‚­ãƒ¼ãƒ ã‚’ä¿®æ­£
+colorscheme torte           "ã‚«ãƒ©ãƒ¼ã‚¹ã‚­ãƒ¼ãƒ ã‚’è¨­å®š
+set number                  "è¡Œæ•°ã‚’è¿½åŠ 
 set clipboard=unnamed,unnamedplus 
-"ƒNƒŠƒbƒvƒ{[ƒh‚É*p‚ÅƒRƒs[‚·‚é‚½‚ß
+"ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã«*pã§ã‚³ãƒ”ãƒ¼ã™ã‚‹ãŸã‚
 set laststatus=2
-"ƒXƒe[ƒ^ƒXƒ‰ƒCƒ“‚ğí•\¦
+"ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ãƒ©ã‚¤ãƒ³ã‚’å¸¸æ™‚è¡¨ç¤º
 set showcmd
 if !exists('g:vscode') 
-	"ÅŒã‚ÉÀs‚µ‚½ƒRƒ}ƒ“ƒh‚ğƒXƒe[ƒ^ƒXƒ‰ƒCƒ“‚É•\¦
+	"æœ€å¾Œã«å®Ÿè¡Œã—ãŸã‚³ãƒãƒ³ãƒ‰ã‚’ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ãƒ©ã‚¤ãƒ³ã«è¡¨ç¤º
 	set cursorline
-	"ƒJ[ƒ\ƒ‹‚ª‹‚és‚Éƒ‰ƒCƒ“‚ğ•\¦
+	"ã‚«ãƒ¼ã‚½ãƒ«ãŒå±…ã‚‹è¡Œã«ãƒ©ã‚¤ãƒ³ã‚’è¡¨ç¤º
 	set cursorcolumn
-	"ƒJ[ƒ\ƒ‹‚ª‹‚é—ñ‚Éƒ‰ƒCƒ“‚ğ•\¦
+	"ã‚«ãƒ¼ã‚½ãƒ«ãŒå±…ã‚‹åˆ—ã«ãƒ©ã‚¤ãƒ³ã‚’è¡¨ç¤º
 endif
 "--------------------------------------------------------------------------
-"@@@@@@@@@@@@@@@for japanese input
+"ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€for japanese input
 "--------------------------------------------------------------------------
 set ttimeout
 set ttimeoutlen=50
@@ -83,15 +81,29 @@ inoremap <silent> <C-j> <C-^>
 "                           leader key settings
 "--------------------------------------------------------------------------
 let mapleader = "-"
-"ƒŠ[ƒ_[ƒL[‚ğ-‚Éİ’è
+"ãƒªãƒ¼ãƒ€ãƒ¼ã‚­ãƒ¼ã‚’-ã«è¨­å®š
 nnoremap <leader>ev :vsplit $MYVIMRC<cr> 
-"-ev‚ÅMYVIMRC‚ğŠJ‚­
+"-evã§MYVIMRCã‚’é–‹ã
 nnoremap <leader>sv :source $MYVIMRC<cr>
-"-sv‚ÅMYVIMRC‚ğÀs
-set showmatch               "ƒJƒbƒR()‚ğ‘Î‰‚Ã‚¯‚é
+"-svã§MYVIMRCã‚’å®Ÿè¡Œ
+set showmatch               "ã‚«ãƒƒã‚³()ã‚’å¯¾å¿œã¥ã‘ã‚‹
 set matchtime=1
-"‘Î‰‚·‚éƒJƒbƒR‚ÖƒJ[ƒ\ƒ‹‚ª”ò‚ÔŠÔ‚ğ0.1•b‚Éİ’è
+"å¯¾å¿œã™ã‚‹ã‚«ãƒƒã‚³ã¸ã‚«ãƒ¼ã‚½ãƒ«ãŒé£›ã¶æ™‚é–“ã‚’0.1ç§’ã«è¨­å®š
 set pumheight=10
-"•âŠ®‚Ìƒ|ƒbƒvƒAƒbƒvƒƒjƒ…[‚Ì‚‚³‚ğİ’è
+"è£œå®Œã®ãƒãƒƒãƒ—ã‚¢ãƒƒãƒ—ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã®é«˜ã•ã‚’è¨­å®š
 
-let g:python3_host_prog='C:\Users\songp\AppData\Local\Programs\Python\Python310\python.exe'
+let g:python3_host_prog='C:\Users\matsuura\AppData\Local\Programs\Python\Python310\python.exe'
+
+"--------------------------------------------------------------------------
+"                           for QFixHowm
+"--------------------------------------------------------------------------
+"QFixHowmã®å°å…¥
+set runtimepath+=C:\Users\matsuura\qfixhowm
+
+let howm_dir    = 'C:\Users\matsuura\OneDrive\ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆ\diary'
+let howm_filename = '%Y/%m/%Y-%m-%d-%H%M%S.md'
+let howm_fileencoding   = 'cp932'
+let howm_fileformat     = 'dos'
+let QFixWin_EnableMode = 1
+let QFixHowm_FileType   = 'markdown'
+let QFixHowm_Title      = '#'
