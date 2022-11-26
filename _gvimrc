@@ -1,0 +1,34 @@
+"--------------------------------------------------------------------------
+"                            general settings
+"--------------------------------------------------------------------------
+silent! helptags ALL
+syntax on
+"シンタックスハイライトを有効化
+filetype plugin indent on
+"ファイルタイプに基づいたインデントを有効化
+set foldmethod=indent       "インデントでたたむ
+set autoindent
+"新しい行を始めるときに自動でインデント 
+set expandtab               "タブをスペースに変換
+set tabstop=4
+"タブをスペース四文字とカウント
+set shiftwidth=4
+"自動インデントに使われるスペースの数を四に設定
+set backspace=2
+"バックスペースの挙動を修正
+set termguicolors
+"tmuxなどのカラースキームを修正
+colorscheme torte           "カラースキームを設定
+set number                  "行数を追加
+set clipboard=unnamed,unnamedplus 
+"クリップボードに*pでコピーするため
+set laststatus=2
+"ステータスラインを常時表示
+set showcmd
+if !exists('g:vscode') 
+	"最後に実行したコマンドをステータスラインに表示
+	set cursorline
+	"カーソルが居る行にラインを表示
+	set cursorcolumn
+	"カーソルが居る列にラインを表示
+endif
