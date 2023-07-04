@@ -1,6 +1,7 @@
 "-------------------------------------------------------------------------
-""                           for plugin
+"                           for plugin
 "-------------------------------------------------------------------------
+set encoding=utf-8
 let g:plug_timeout = 300
 
 call plug#begin('~/.config/nvim/plugged')
@@ -15,7 +16,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'plasticboy/vim-markdown'
 	Plug 'previm/previm'
     Plug 'daeyun/vim-matlab'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 filetype plugin on "for netrw
@@ -34,6 +35,8 @@ let g:previm_open_cmd = 'C:/Program\ Files//Google/Chrome/Application/chrome.exe
 "--------------------------------------------------------------------------
 "                            general settings
 "--------------------------------------------------------------------------
+set guifont=FixedSys:h14
+set guifontwide=FixedSys:h16
 silent! helptags ALL
 syntax on
 "シンタックスハイライトを有効化
@@ -92,15 +95,17 @@ set matchtime=1
 set pumheight=10
 "補完のポップアップメニューの高さを設定
 
-let g:python3_host_prog='C:\Users\matsuura\AppData\Local\Programs\Python\Python310\python.exe'
-
+"pythonのバージョンはgvim依存
+"set pythonthreedll='C:\Users\songp\AppData\Local\Programs\Python\Python311\python311.dll'
+"set pythonthreehome='C:\Users\songp\AppData\Local\Programs\Python\Python311\python.exe'
+let g:python3_host_prog='C:\Users\songp\AppData\Local\Programs\Python\Python311\python.exe'
 "--------------------------------------------------------------------------
 "                           for QFixHowm
 "--------------------------------------------------------------------------
 "QFixHowmの導入
-set runtimepath+=C:\Users\matsuura\qfixhowm
+set runtimepath+=C:\Users\songp\qfixhowm
 
-let howm_dir    = 'C:\Users\matsuura\OneDrive\ドキュメント\diary'
+let howm_dir    = 'C:\Users\songp\OneDrive\ドキュメント\diary'
 let howm_filename = '%Y/%m/%Y-%m-%d-%H%M%S.md'
 let howm_fileencoding   = 'cp932'
 let howm_fileformat     = 'dos'
